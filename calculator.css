@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.history-container {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    height: 38vh;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#history {
+    padding: 10px;
+
+}
+
+.history-item {
+    border-bottom: 1px dotted black;
+    padding: 5px 0;
+}
+
+/* .history-btn {
+    height: fit-content;
+    padding:5px;
+} */
+
+.calculator {
+    width: 30vw;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#display {
+    width: 100%;
+    padding: 10px 0;
+    border: 1px solid black ;
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+
+.buttons {
+    margin-top:0.5rem;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 0.2rem;
+}
+
+button {
+    padding: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.hitory-btn {
+    width: 30px;
+}

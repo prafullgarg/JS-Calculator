@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="history-container">
+        <h2>History</h2>
+        <div id="history">
+        </div>
+    </div>
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+        <div class="buttons">
+            <button onclick="clearDisplay()">Clear</button>
+            <button onclick="deleteLast()">Delete</button>
+            <button onclick="appendDisplay('+')">+</button>
+            <button onclick="appendDisplay('-')">-</button>
+            <button onclick="appendDisplay('*')">x</button>
+            <button onclick="appendDisplay('/')">/</button>
+            <button onclick="appendDisplay('%')">%</button>
+            <button onclick="appendDisplay('1')">1</button>
+            <button onclick="appendDisplay('2')">2</button>
+            <button onclick="appendDisplay('3')">3</button>
+            <button onclick="appendDisplay('4')">4</button>
+            <button onclick="appendDisplay('5')">5</button>
+            <button onclick="appendDisplay('6')">6</button>
+            <button onclick="appendDisplay('7')">7</button>
+            <button onclick="appendDisplay('8')">8</button>
+            <button onclick="appendDisplay('9')">9</button>
+            <button onclick="appendDisplay('0')">0</button>
+            <button onclick="appendDisplay('.')">.</button>
+            <button onclick="calculateExpression('=')">=</button>
+            <button onclick="appendDisplay('Math.PI')">π</button>
+            <button onclick="calculate('sin')">sin</button>
+            <button onclick="calculate('cos')">cos</button>
+            <button onclick="calculate('tan')">tan</button>
+            <button onclick="calculate('Math.log')">ln</button>
+            <button onclick="calculate('Math.sqrt')">√</button>
+            <button onclick="calculate('Math.exp')">e^</button>
+            <button onclick="calculate('^')">^</button>
+        </div>
+    </div>
+    <script src="calculator.js"> </script>
+</body>
+</html>
