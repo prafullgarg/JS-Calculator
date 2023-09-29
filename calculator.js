@@ -1,27 +1,32 @@
 function clearDisplay() {
+    // This function will clear the display 
     const display = document.getElementById('display')
     display.value = ''
 }
 
 function deleteLast() {
+    // This function will remove last charachter from the display
     const display = document.getElementById('display')
-    display.value = display.value.slice(0, -1)
+    display.value = display.value.slice(0, -1) // slice function will make substring from first charachter till last second charachter 
 }
 
 function appendDisplay(value) {
+    // This functon will add the key pressed to the display
     const display = document.getElementById('display')
     display.value += value
 }
 
 
 let historyList = []
+
+// Created calculateExpression() function which will evaluate the expression present on the display
 function calculateExpression() {
     try {
         const expression = document.getElementById('display').value
-        const result = eval(expression)
+        const result = eval(expression) // eval function will evaluate the expression present on display
         display.value = result
 
-        addTohistory(expression + ' = ' + result)
+        addTohistory(expression + ' = ' + result) // adding expression to history with result
     } catch (error) {
         alert('Invalid Expresion!')
         clearDisplay();
@@ -34,6 +39,7 @@ function addTohistory(entry) {
 }
 
 function renderHistory() {
+    // This function will continously display all the recorded history    
     const historyDiv = document.getElementById('history')
     historyDiv.innerHTML = ""
 
@@ -45,6 +51,8 @@ function renderHistory() {
     }
 }
 
+
+// Upgrading basic calculator to scientific calculator
 function calculate(operation) {
     const display = document.getElementById('display')
     const value = parseFloat(display.value)
@@ -75,6 +83,7 @@ function calculate(operation) {
 }
 
 
+// adding an keyboard support feature to improve user experience since user will be able to use calculator with the help of keyboard
 document.addEventListener('keydown', function (event) {
     switch (event.key) {
         case '0':
